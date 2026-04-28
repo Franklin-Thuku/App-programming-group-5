@@ -105,3 +105,48 @@ class GameLogic
         return score;
     }
 }
+
+SHORTER SOLUTION ASSUMING THE SECRET NUMBER IS ONLY KNOWN BY THE PROGRAM AND THE PROGRAMMER
+#include <stdio.h>
+using System;
+
+class Luckygame
+{
+    static void main()
+    {
+        int totalScore = 0;
+        int secretNumber = 8;
+        
+        Console.Write("Enter the number of rounds you wish to play: ");
+        int rounds = int.Parse(Console.ReadLine());
+        
+        for (int i; i <= rounds; i++)
+        {
+            Console.Write("Round {0}: Enter you lucky number: ", i);
+            luckynumber = int.Parse(Console.ReadLine());
+            
+            int remaind = luckynumber % secretNumber;
+            
+            if (remaind == 0)
+            {
+                totalScore += 1; 
+            }
+            if (remaind% 2 == 0)
+            {
+                totalScore +=3;
+            }
+            else
+            {
+                totalScore -=3;
+            }
+        }
+        if (totalScore > 0)
+        {
+            Console.WriteLine("Final Score: {0}, You wiinn", totalScore);
+        }
+        else
+        {
+            Console.WriteLine("Final Score: {0}, You lose", totalScore);
+        }
+    }
+}
