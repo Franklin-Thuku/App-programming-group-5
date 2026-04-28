@@ -1,0 +1,5 @@
+C:\Users\User\OneDrive\Desktop\2.2\application programming\c#work\App-programming-group-5\obj\Debug\net10.0\App-programming-group-5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Desktop\2.2\application programming\c#work\App-programming-group-5\obj\Debug\net10.0\App-programming-group-5.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Desktop\2.2\application programming\c#work\App-programming-group-5\obj\Debug\net10.0\App-programming-group-5.AssemblyInfo.cs
+C:\Users\User\OneDrive\Desktop\2.2\application programming\c#work\App-programming-group-5\obj\Debug\net10.0\App-programming-group-5.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Desktop\2.2\application programming\c#work\App-programming-group-5\obj\Debug\net10.0\App-programming-group-5.sourcelink.json

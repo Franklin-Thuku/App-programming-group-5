@@ -24,7 +24,7 @@ class LuckyGame
 
             int result = logic.PlayRound();
             totalScore += result;
-=
+
             // tracking outcomes separately gives us a proper breakdown at the end
             if (result == 1)       draws++;
             else if (result == 3)  wins++;
@@ -68,7 +68,7 @@ class GameLogic
 
     public GameLogic()
     {
-        // IMPROVEMENT: random range 2–9 keeps division interesting. It avoids 0 or 1 edge cases
+        // IMPROVEMENT: random range 2-9 keeps division interesting. It avoids 0 or 1 edge cases
         SecretNumber = new Random().Next(2, 10);
     }
 
@@ -83,19 +83,19 @@ class GameLogic
 
         if (remainder == 0)
         {
-            // LOGIC: exactly divisible = draw → +1
+            // LOGIC: exactly divisible = draw -> +1
             Console.WriteLine("  Draw! (+1)");
             score = 1;
         }
         else if (remainder % 2 == 0)
         {
-            // LOGIC: remainder is non-zero but even = win → +3
+            // LOGIC: remainder is non-zero but even = win -> +3
             Console.WriteLine("  You won this round! (+3)");
             score = 3;
         }
         else
         {
-            // LOGIC: remainder is odd = loss → -3 (score-=3 in original was a bug, should return -3 not decrement locally)
+            // LOGIC: remainder is odd = loss -> -3 (score-=3 in original was a bug, should return -3 not decrement locally)
             Console.WriteLine("  You lost this round! (-3)");
             score = -3;
         }
@@ -105,3 +105,48 @@ class GameLogic
         return score;
     }
 }
+/*
+//SHORTER SOLUTION ASSUMING THE SECRET NUMBER IS ONLY KNOWN BY THE PROGRAM AND THE PROGRAMMER
+using System;
+
+class Luckygame
+{
+    static void main()
+    {
+        int totalScore = 0;
+        int secretNumber = 8;
+        
+        Console.Write("Enter the number of rounds you wish to play: ");
+        int rounds = int.Parse(Console.ReadLine());
+        
+        for (int i; i <= rounds; i++)
+        {
+            Console.Write("Round {0}: Enter you lucky number: ", i);
+            luckynumber = int.Parse(Console.ReadLine());
+            
+            int remaind = luckynumber % secretNumber;
+            
+            if (remaind == 0)
+            {
+                totalScore += 1; 
+            }
+            if (remaind% 2 == 0)
+            {
+                totalScore +=3;
+            }
+            else
+            {
+                totalScore -=3;
+            }
+        }
+        if (totalScore > 0)
+        {
+            Console.WriteLine("Final Score: {0}, You wiinn", totalScore);
+        }
+        else
+        {
+            Console.WriteLine("Final Score: {0}, You lose", totalScore);
+        }
+    }
+}
+*/

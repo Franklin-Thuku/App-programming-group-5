@@ -1,6 +1,6 @@
 using System;
 
-class Program
+class patternPrinter
 {
     static void Main(string[] args)
     {
