@@ -24,7 +24,7 @@ class LuckyGame
 
             int result = logic.PlayRound();
             totalScore += result;
-
+=
             // tracking outcomes separately gives us a proper breakdown at the end
             if (result == 1)       draws++;
             else if (result == 3)  wins++;
