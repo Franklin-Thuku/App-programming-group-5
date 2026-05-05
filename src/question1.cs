@@ -83,6 +83,7 @@ class GameLogic
 
         if (remainder == 0)
         {
+            
             // LOGIC: exactly divisible = draw → +1
             Console.WriteLine("  Draw! (+1)");
             score = 1;
