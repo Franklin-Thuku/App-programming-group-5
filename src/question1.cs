@@ -83,7 +83,12 @@ class GameLogic
 
         if (remainder == 0)
         {
+<<<<<<< HEAD
             // LOGIC: exactly divisible = draw -> +1
+=======
+            
+            // LOGIC: exactly divisible = draw → +1
+>>>>>>> master
             Console.WriteLine("  Draw! (+1)");
             score = 1;
         }
@@ -105,8 +110,14 @@ class GameLogic
         return score;
     }
 }
+<<<<<<< HEAD
 /*
 //SHORTER SOLUTION ASSUMING THE SECRET NUMBER IS ONLY KNOWN BY THE PROGRAM AND THE PROGRAMMER
+=======
+
+SHORTER SOLUTION ASSUMING THE SECRET NUMBER IS ONLY KNOWN BY THE PROGRAM AND THE PROGRAMMER
+#include <stdio.h>
+>>>>>>> master
 using System;
 
 class Luckygame
@@ -149,4 +160,7 @@ class Luckygame
         }
     }
 }
+<<<<<<< HEAD
 */
+=======
+>>>>>>> master
