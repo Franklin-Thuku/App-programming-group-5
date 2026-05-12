@@ -16,36 +16,31 @@ class Question3
                 "\nCustomer " + i
             );
 
-            double creditLimit;
-
             Console.Write(
                 "Enter credit limit: "
             );
 
-            creditLimit =
+            double creditLimit =
+                Convert.ToDouble(
+                    Console.ReadLine()
+                );
+
+            Console.Write(
+                "Enter price: "
+            );
+
+            double price =
                 Convert.ToDouble(
                     Console.ReadLine()
                 );
 
             while (true)
             {
-                double price;
-                int quantity;
-
-                Console.Write(
-                    "Enter price: "
-                );
-
-                price =
-                    Convert.ToDouble(
-                        Console.ReadLine()
-                    );
-
                 Console.Write(
                     "Enter quantity: "
                 );
 
-                quantity =
+                int quantity =
                     Convert.ToInt32(
                         Console.ReadLine()
                     );
@@ -57,6 +52,9 @@ class Question3
                 {
                     Console.WriteLine(
                         "Sorry you cannot purchase goods worthy such a value on credit"
+                    );
+                    Console.WriteLine(
+                        "Please re-enter the quantity."
                     );
                 }
                 else
