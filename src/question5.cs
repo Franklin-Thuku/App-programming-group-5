@@ -31,14 +31,13 @@ class SalesProgram
         }
 
         // Output Section
-        Console.WriteLine("Name");
-        Console.WriteLine("Item1 Item2 Item3 Item4 Item5 TotalSales");
+        Console.WriteLine("Name\t\tItem1\tItem2\tItem3\tItem4\tItem5\tTotalSales");
         Console.WriteLine("___________________________________________________");
 
         for (int i = 0; i < NUM_SALESMEN; i++)
         {
-            // Print Name
-            Console.WriteLine(salesmanNames[i]);
+            // Print Name and all sales on one line
+            Console.Write(salesmanNames[i] + "\t");
             
             // Print Sales for each item
             for (int j = 0; j < NUM_ITEMS; j++)
@@ -51,7 +50,7 @@ class SalesProgram
         }
 
         Console.WriteLine("___________________________________________________");
-        Console.WriteLine($"GrandTotal {grandTotal}");
+        Console.WriteLine($"GrandTotal\t\t\t\t\t\t\t{grandTotal}");
         
         Console.ReadKey();
     }
