@@ -2,7 +2,7 @@ using System;
 
 class Question3
 {
-    static void Main()
+    public static void Run()
     {
         int numberOfCustomers;
 

@@ -1,8 +1,8 @@
 using System;
 
-class Program
+class AreaCalculator
 {
-    static void Main()
+    public static void Run()
     {
         int attempts = 0;
         const int MAX_ATTEMPTS = 3;

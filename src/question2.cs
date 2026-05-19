@@ -1,8 +1,8 @@
 using System;
 
-class patternPrinter
+class PatternPrinter
 {
-    static void Main(string[] args)
+    public static void Run()
     {
         int size = 6;
 
@@ -10,9 +10,6 @@ class patternPrinter
         {
             for (int col = 0; col < size; col++)
             {
-                // First and last rows are all '&'
-                // First and last cols are '&', middle is '*'
-                // The diagonal (row == col) is '&', rest are '*'
                 if (row == 0 || row == size - 1 || row == col)
                     Console.Write("& ");
                 else

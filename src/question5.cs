@@ -2,7 +2,7 @@ using System;
 
 class SalesProgram
 {
-    static void Main(string[] args)
+    public static void Run()
     {
         const int NUM_SALESMEN = 10;
         const int NUM_ITEMS = 5;
@@ -15,8 +15,20 @@ class SalesProgram
         // Input Section
         for (int i = 0; i < NUM_SALESMEN; i++)
         {
-            Console.Write("Enter salesman name: ");
-            salesmanNames[i] = Console.ReadLine();
+            string salesman_name;
+            while (true)
+            {
+                Console.Write("Enter salesman name: ");
+                salesman_name = Console.ReadLine();
+                
+                // Validate that name is not empty and not purely numeric
+                if (!string.IsNullOrWhiteSpace(salesman_name) && !int.TryParse(salesman_name, out _))
+                {
+                    break;
+                }
+                Console.WriteLine("Invalid input. Please enter a valid name (not a number).");
+            }
+            salesmanNames[i] = salesman_name;
 
             for (int j = 0; j < NUM_ITEMS; j++)
             {
