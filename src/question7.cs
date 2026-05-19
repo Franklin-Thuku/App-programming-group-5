@@ -29,7 +29,7 @@ public static class Question7
 
         for (int i = 0; i < count; i++)
         {
-            Console.WriteLine($"\nBook #{i + 1}");
+            Console.WriteLine($"\nBook {i + 1})");
             Console.Write("  Code: ");
             string code = Console.ReadLine() ?? string.Empty;
             Console.Write("  Name: ");
